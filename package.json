@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:ts": "tsc --watch",
+    "watch:ts-node": "ts-node-dev --respawn src/index.ts",
+    "build:ts": "tsc --build"
   },
   "keywords": [
     "typescript",
@@ -14,6 +16,8 @@
   "author": "Tobias Weyer",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^18.0.3",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^4.7.4"
   }
 }
