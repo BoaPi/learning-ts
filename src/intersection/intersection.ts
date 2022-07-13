@@ -2,16 +2,16 @@
 
 // intersection types
 type Food = {
-  needsFridge: boolean;
+  needsFridge: Boolean;
 };
 
 type Cheese = {
-  flavor: string;
+  flavor: String;
 };
 
 type BlueCheese = Food & Cheese;
 
-const intersectionLesson = (): string => {
+const intersectionLesson = (): String => {
   const newCheese: BlueCheese = {
     needsFridge: true,
     flavor: "strong",
@@ -20,4 +20,4 @@ const intersectionLesson = (): string => {
   return newCheese.flavor;
 };
 
-export { intersectionLesson };
+export { intersectionLesson, Food, Cheese, BlueCheese };
