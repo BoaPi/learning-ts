@@ -14,8 +14,14 @@
     "allowUnreachableCode": false,
     "exactOptionalPropertyTypes": true,
     "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "types/*": ["src/types/*"],
+      "interfaces/*": ["src/interfaces/*"],
+      "lessons/*": ["src/lessons/*"]
+    }
   },
   "files": [
     "src/index.ts"
-  ],
+  ], 
 }
