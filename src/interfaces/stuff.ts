@@ -1,6 +1,6 @@
-import { Hotdog, Burger, BlueCheese } from "types/food"
+import { Hotdog, Burger, BlueCheese } from "../types/food"
 
-type Backpack = {
+interface Backpack {
   food: Hotdog | Burger | BlueCheese
   hasRainCover: Boolean
 }

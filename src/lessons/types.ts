@@ -1,7 +1,7 @@
 "use strict"
 
 import { Burger, Hotdog } from "types/food";
-import { Backpack } from "types/stuff";
+import { Backpack } from "interfaces/stuff";
 
 const MyHotdog: Hotdog = {
   needsFridge: false,
@@ -23,7 +23,7 @@ const MyBackpack: Backpack = {
 
 const OtherBackpack: Backpack = {
   food: MyHotdog,
-  hasRainCover: false
+  hasRainCover: false,
 }
 
 const typesLesson = (): String => {
