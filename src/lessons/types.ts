@@ -27,9 +27,10 @@ const OtherBackpack: Backpack = {
 }
 
 const typesLesson = (): String => {
+  const myStuff = `MyBackpack - RainCover: ${MyBackpack.hasRainCover}\n`
+  const otherStuff = `MyBackpack - RainCover: ${OtherBackpack.hasRainCover}`
   
-  
-  return ""
+  return myStuff + " " + otherStuff
 }
 
 export { typesLesson }
