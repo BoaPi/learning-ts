@@ -1,8 +1,8 @@
 "use strict";
 
-import { intersectionLesson } from "./intersection/intersection";
-import { interfaceLesson } from "./interface/interface";
-import { typesLesson } from "./types/types"
+import { intersectionLesson } from "./lessons/intersection";
+import { interfaceLesson } from "./lessons/interface";
+import { typesLesson } from "./lessons/types"
 
 // define function signature for lessons array
 type Lesson = () => String

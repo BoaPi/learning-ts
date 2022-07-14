@@ -1,15 +1,6 @@
 "use strict";
 
-// union interface
-interface Food {
-  needsFridge: boolean;
-}
-
-interface Cheese {
-  flavor: string;
-}
-
-interface BlueCheese extends Food, Cheese {}
+import { BlueCheese } from "interfaces/food";
 
 const interfaceLesson = (): string => {
   const newCheese: BlueCheese = {

@@ -1,20 +1,7 @@
 "use strict"
 
-import { Food, Cheese, BlueCheese } from "../intersection/intersection";
-
-type Hotdog = Food & {
-  backedOver: Boolean
-}
-
-type Burger = Food & {
-  pattyCount: Number
-  cheese: Cheese
-}
-
-type Backpack = {
-  food: Hotdog | Burger | BlueCheese
-  hasRainCover: Boolean
-}
+import { Burger, Hotdog } from "types/food";
+import { Backpack } from "types/stuff";
 
 const MyHotdog: Hotdog = {
   needsFridge: false,
