@@ -5,7 +5,7 @@ import { interfaceLesson } from "./lessons/interface";
 import { typesLesson } from "./lessons/types"
 
 // define function signature for lessons array
-type Lesson = () => String
+type Lesson = () => string
 
 /**
  * @name lessons
@@ -20,7 +20,7 @@ const lessons: Lesson[] = [
 /**
  * @description looping of lessons array and call each lesson
  */
-lessons.forEach((lesson: Function, i: Number): void => {
+lessons.forEach((lesson: Lesson, i: number): void => {
   console.log("=====================")
   console.log(`Lesson: ${i}`)
   console.log(lesson())
