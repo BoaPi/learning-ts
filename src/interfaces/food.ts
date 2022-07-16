@@ -5,7 +5,7 @@
 /**
  * @name Food
  * @description generic food type 
- * @property needsFridge - boolean to describe, if the related food needs a fridge
+ * @property {boolean}  needsFridge boolean to describe, if the related food needs a fridge
  */
 interface Food {
   needsFridge: boolean;

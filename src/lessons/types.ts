@@ -26,7 +26,7 @@ const OtherBackpack: Backpack = {
   hasRainCover: false,
 }
 
-const typesLesson = (): String => {
+const typesLesson = (): string => {
   const myStuff = `MyBackpack - RainCover: ${MyBackpack.hasRainCover}\n`
   const otherStuff = `MyBackpack - RainCover: ${OtherBackpack.hasRainCover}`
   

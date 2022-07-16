@@ -1,20 +1,20 @@
 // intersection types
 type Food = {
-  needsFridge: Boolean;
+  needsFridge: boolean;
 };
 
 type Cheese = {
-  flavor: String;
+  flavor: string;
 };
 
 type BlueCheese = Food & Cheese;
 
 type Hotdog = Food & {
-  backedOver: Boolean
+  backedOver: boolean
 }
 
 type Burger = Food & {
-  pattyCount: Number
+  pattyCount: number
   cheese: Cheese
 }
 

@@ -2,7 +2,7 @@
 
 import { BlueCheese } from "types/food";
 
-const intersectionLesson = (): String => {
+const intersectionLesson = (): string => {
   const newCheese: BlueCheese = {
     needsFridge: true,
     flavor: "strong",
