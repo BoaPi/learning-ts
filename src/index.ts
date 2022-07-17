@@ -2,10 +2,11 @@
 
 import { intersectionLesson } from "./lessons/intersection";
 import { interfaceLesson } from "./lessons/interface";
-import { typesLesson } from "./lessons/types"
+import { typesLesson } from "./lessons/types";
+import { typeCheckingLesson } from "./lessons/typeChecking";
 
 // define function signature for lessons array
-type Lesson = () => string
+type Lesson = () => string;
 
 /**
  * @name lessons
@@ -15,14 +16,15 @@ const lessons: Lesson[] = [
   interfaceLesson,
   intersectionLesson,
   typesLesson,
-]
+  typeCheckingLesson,
+];
 
 /**
  * @description looping of lessons array and call each lesson
  */
 lessons.forEach((lesson: Lesson, i: number): void => {
-  console.log("=====================")
-  console.log(`Lesson: ${i}`)
-  console.log(lesson())
-  console.log("=====================")
+  console.log("=====================");
+  console.log(`Lesson: ${i}`);
+  console.log(lesson());
+  console.log("=====================");
 });
