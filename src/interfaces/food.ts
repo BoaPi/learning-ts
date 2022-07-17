@@ -4,7 +4,7 @@
 
 /**
  * @name Food
- * @description generic food type 
+ * @description generic food type
  * @property {boolean}  needsFridge boolean to describe, if the related food needs a fridge
  */
 interface Food {
@@ -17,8 +17,4 @@ interface Cheese {
 
 interface BlueCheese extends Food, Cheese {}
 
-export {
-  Food,
-  Cheese,
-  BlueCheese,
-}
+export { Food, Cheese, BlueCheese };

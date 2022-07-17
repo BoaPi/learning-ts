@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 import { Burger, Hotdog } from "types/food";
 import { Backpack } from "interfaces/stuff";
@@ -6,31 +6,31 @@ import { Backpack } from "interfaces/stuff";
 const MyHotdog: Hotdog = {
   needsFridge: false,
   backedOver: true,
-}
+};
 
 const MyBurger: Burger = {
   needsFridge: true,
   pattyCount: 3,
   cheese: {
-    flavor: "mild"
-  }
-}
+    flavor: "mild",
+  },
+};
 
 const MyBackpack: Backpack = {
   food: MyBurger,
   hasRainCover: true,
-}
+};
 
 const OtherBackpack: Backpack = {
   food: MyHotdog,
   hasRainCover: false,
-}
+};
 
 const typesLesson = (): string => {
-  const myStuff = `MyBackpack - RainCover: ${MyBackpack.hasRainCover}\n`
-  const otherStuff = `MyBackpack - RainCover: ${OtherBackpack.hasRainCover}`
-  
-  return myStuff + " " + otherStuff
-}
+  const myStuff = `MyBackpack - RainCover: ${MyBackpack.hasRainCover}\n`;
+  const otherStuff = `MyBackpack - RainCover: ${OtherBackpack.hasRainCover}`;
 
-export { typesLesson }
+  return myStuff + " " + otherStuff;
+};
+
+export { typesLesson };

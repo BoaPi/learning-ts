@@ -10,18 +10,12 @@ type Cheese = {
 type BlueCheese = Food & Cheese;
 
 type Hotdog = Food & {
-  backedOver: boolean
-}
+  backedOver: boolean;
+};
 
 type Burger = Food & {
-  pattyCount: number
-  cheese: Cheese
-}
+  pattyCount: number;
+  cheese: Cheese;
+};
 
-export {
-  Food,
-  Cheese,
-  BlueCheese,
-  Burger,
-  Hotdog,
-}
+export { Food, Cheese, BlueCheese, Burger, Hotdog };

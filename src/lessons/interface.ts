@@ -8,7 +8,7 @@ const interfaceLesson = (): string => {
     flavor: "strong",
   };
 
-  return newCheese.flavor
+  return newCheese.flavor;
 };
 
 export { interfaceLesson };
