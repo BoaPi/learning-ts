@@ -5,6 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "watch:ts": "tsc --watch",
+    "watch:fetch": "tsc --watch ./src/lessons/fetch/main.ts",
     "watch:ts-node": "ts-node-dev --respawn src/index.ts",
     "build:ts": "tsc --build"
   },
