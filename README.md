@@ -16,6 +16,43 @@ root
 
 ## TS/JS in depth
 
+TS & JS topics in depth, technical concepts, pattern etc.
+
+### General
+
+* `null` => deliberate non-value
+* `undefined` => absence of value
+* `undefined` can be be obtained by:
+  * implizit `return` statement
+  * accessing a non-existent object property
+  * variable declaration without initialization
+* `false`, `0`, `""`, `NaN`, `null` & `undefined` are all `false`
+* all other values are `true`
+* `let` => block-level variables
+* `const` => never intended to change, also block level
+* `var` => non-block scoping, surprising behavior and therfor discourage in modern JS/TS
+
+### Objects
+
+* everything in JS is an **object**
+* except `null`, `undefined`, `strings`, `numbers`, `boolean`, and `symbols`
+* **objects** are hashes and do not have fixed shapes
+* properties can be added, deleted, re-ordered, mutated
+* object keys are always `string` or `symbol`
+
+### Functions
+
+* frist-class objects
+* can be assigned to **variables**, passed as **arguments** and be returned from other functions
+* support **closure**
+
+### Arrow Functions
+
+* do not have their own binding to `this`, `arguments` or `super`
+* should not be used as methods
+* can not be a constructor
+* can not use `yield` inside their function body
+
 ### Closure
 
 When return a function **fn1** from another function **fn2**, all declared variables in the lexical scope will be returned implicitly as **Persistend Lexical Scope References**. But only if the variables itself will **not** get returned.
@@ -48,3 +85,7 @@ It is possible to create a private and public API, module pattern implementation
 * common case is a time value of `0`
 * `0` means not that the **message** will put immediately into the `stack`
 * instead is has to wait until all queued **messages** are processed
+* `web workers` or cross-origin `iframe` have there own stack, heap and queue.
+* communication between those runtimes is possible through `postMessage`
+* `postMessage` adds a **message** to the other runtime, if the latter listens to `message` method
+* the event loop never blocks
