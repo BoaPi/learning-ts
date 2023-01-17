@@ -18,6 +18,19 @@ node_modules/
 .env
 .env.test
 
-# ts builds
+# builds
 dist
 src/lessons/fetch/main.js
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
