@@ -1,24 +1,15 @@
 {
-  "name": "learning-ts",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
+  "name": "js-brush-up",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "watch:ts": "tsc --watch",
-    "watch:fetch": "tsc --watch ./src/lessons/fetch/main.ts",
-    "watch:ts-node": "ts-node-dev --respawn src/index.ts",
-    "build:ts": "tsc --build"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "keywords": [
-    "typescript",
-    "types",
-    "javascript"
-  ],
-  "author": "Tobias Weyer",
-  "license": "ISC",
   "devDependencies": {
-    "@types/node": "^18.0.3",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0"
   }
 }

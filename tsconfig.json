@@ -1,27 +1,19 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
-    "target": "ES2022",
-    "outDir": "dist",
-    "alwaysStrict": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "Node",
     "strict": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitOverride": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noEmit": true,
     "noUnusedLocals": true,
-    "strictNullChecks": true,
-    "allowUnreachableCode": false,
-    "exactOptionalPropertyTypes": true,
-    "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
-    "paths": {
-      "types/*": ["src/types/*"],
-      "interfaces/*": ["src/interfaces/*"],
-      "lessons/*": ["src/lessons/*"]
-    }
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true
   },
-  "files": [
-    "src/index.ts"
-  ], 
+  "include": ["src"]
 }
