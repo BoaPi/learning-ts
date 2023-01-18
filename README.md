@@ -65,6 +65,27 @@ variable with the function declaration => closure.
 
 It is possible to create a private and public API, module pattern implementations, memorization or function that will run only one time.
 
+### Async Code & Promises
+
+* **promises** => eventual completion or failure of an asynchonous operation and the resulting value
+* **promises** can be:
+  * **pending** => initial state
+  * **fulfilled** => successful completion
+  * rejected** => failed operation
+* a **Promise** is **settled** when it is either fulfilled or rejected
+* a `.then()` method returns a new generated **promise**
+* `.then()` takes two parameters:
+  * callback for as resolve and successful handler
+  * callback for as reject and failure handler
+* therefore **promises** can be chanined in success cases
+* return value of a `resolve` promise is passed along to the next `.then()`
+* reject reason of a `reject` promise is passed along to the next **rejection handler**
+* there are four ways for concurrenc handling of **promises**, see lessons for examples
+  * `all()
+  * `allSettled()`
+  * `any()`
+  * `race()`
+
 ### Event Loop
 
 * contains the **stack**, **heap** and **queue**
