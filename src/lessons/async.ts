@@ -16,6 +16,25 @@ const asyncPromiseLesson = (): [string, string] => {
   // simple resolve promise
   promise1.then((result) => console.log(result));
 
+  // promise chain
+  promise1
+    .then((result) => {
+      console.log('resolve step 1: ', result);
+      return result;
+    })
+    .then((result) => console.log('resolve step 2: ', result));
+
+  // promise chain with reject
+  promise2
+    .then((result) => {
+      console.log('reject step 1: ', result);
+      return result;
+    })
+    .then((result) => console.log('reject step 2: ', result))
+    .catch((err) => {
+      throw new Error(err);
+    });
+
   // simple reject promise
   promise2
     .then((result) => console.log(result))
@@ -57,6 +76,14 @@ const asyncPromiseLesson = (): [string, string] => {
     .then((promises) => console.log([promises]))
     .catch((promises) => console.log([promises]))
     .finally(() => console.log('Any resolved - all done!'));
+
+  // static methods
+  Promise.resolve('Promise resolved with static method').then((result) =>
+    console.log(result),
+  );
+  Promise.reject(new Error('Promise rejected with static method')).catch(
+    (result) => console.error(result),
+  );
 
   return ['Async', 'Results will be logged async'];
 };
