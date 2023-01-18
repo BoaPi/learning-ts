@@ -9,7 +9,7 @@
  */
 
 interface Animal {
-  type: "dog" | "cat";
+  type: 'dog' | 'cat';
   legs: number;
 }
 
@@ -39,4 +39,4 @@ interface Cat extends Animal {
   meow: () => string;
 }
 
-export { Dog, Cat };
+export type { Dog, Cat };

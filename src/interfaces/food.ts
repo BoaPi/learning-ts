@@ -17,4 +17,4 @@ interface Cheese {
 
 interface BlueCheese extends Food, Cheese {}
 
-export { Food, Cheese, BlueCheese };
+export type { Food, Cheese, BlueCheese };
