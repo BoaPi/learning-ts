@@ -1,39 +1,37 @@
-"use strict";
+import { Dog, Cat } from 'interfaces/animals';
 
-import { Dog, Cat } from "interfaces/animals";
-
-const typeCheckingLesson = (): string => {
+const typeCheckingLesson = (): [string, string] => {
   const dog: Dog = {
-    type: "dog",
-    name: "Rutherford",
-    breed: "Jack Russel",
+    type: 'dog',
+    name: 'Rutherford',
+    breed: 'Jack Russel',
     legs: 4,
-    bark: () => "woof",
+    bark: () => 'woof',
   };
 
   const cat: Cat = {
-    type: "cat",
-    name: "Sith",
-    breed: "England Cat",
+    type: 'cat',
+    name: 'Sith',
+    breed: 'England Cat',
     legs: 4,
-    meow: () => "meeeooooooowwwww",
+    meow: () => 'meeeooooooowwwww',
   };
 
   const pets: (Dog | Cat)[] = [dog, cat];
 
-  let petsVoices: string = "";
+  let petsVoices = '';
 
   pets.forEach((pet): void => {
     petsVoices = `${petsVoices}${pet.type} with the name ${pet.name} makes`;
 
-    if ("bark" in pet) {
-      petsVoices = `${petsVoices} ${pet.bark()}\n`
+    if ('bark' in pet) {
+      petsVoices = `${petsVoices} ${pet.bark()}\n`;
     } else {
-      petsVoices = `${petsVoices} ${pet.meow()}\n`
+      petsVoices = `${petsVoices} ${pet.meow()}\n`;
     }
   });
 
-  return petsVoices;
+  return ['type checking', petsVoices];
 };
 
 export { typeCheckingLesson };

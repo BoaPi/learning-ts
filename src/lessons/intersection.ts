@@ -1,14 +1,12 @@
-"use strict";
+import { BlueCheese } from 'types/food';
 
-import { BlueCheese } from "types/food";
-
-const intersectionLesson = (): string => {
+const intersectionLesson = (): [string, string] => {
   const newCheese: BlueCheese = {
     needsFridge: true,
-    flavor: "strong",
+    flavor: 'strong',
   };
 
-  return newCheese.flavor;
+  return ['intersection', newCheese.flavor];
 };
 
 export { intersectionLesson };

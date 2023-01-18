@@ -1,14 +1,12 @@
-"use strict";
+import { BlueCheese } from 'interfaces/food';
 
-import { BlueCheese } from "interfaces/food";
-
-const interfaceLesson = (): string => {
+const interfaceLesson = (): [string, string] => {
   const newCheese: BlueCheese = {
     needsFridge: true,
-    flavor: "strong",
+    flavor: 'strong',
   };
 
-  return newCheese.flavor;
+  return ['interface', newCheese.flavor];
 };
 
 export { interfaceLesson };

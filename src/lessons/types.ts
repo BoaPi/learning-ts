@@ -1,7 +1,5 @@
-"use strict";
-
-import { Burger, Hotdog } from "types/food";
-import { Backpack } from "interfaces/stuff";
+import { Burger, Hotdog } from 'types/food';
+import { Backpack } from 'interfaces/stuff';
 
 const MyHotdog: Hotdog = {
   needsFridge: false,
@@ -12,7 +10,7 @@ const MyBurger: Burger = {
   needsFridge: true,
   pattyCount: 3,
   cheese: {
-    flavor: "mild",
+    flavor: 'mild',
   },
 };
 
@@ -26,11 +24,11 @@ const OtherBackpack: Backpack = {
   hasRainCover: false,
 };
 
-const typesLesson = (): string => {
+const typesLesson = (): [string, string] => {
   const myStuff = `MyBackpack - RainCover: ${MyBackpack.hasRainCover}\n`;
   const otherStuff = `MyBackpack - RainCover: ${OtherBackpack.hasRainCover}`;
 
-  return myStuff + " " + otherStuff;
+  return ['types', `${myStuff}${otherStuff}`];
 };
 
 export { typesLesson };
