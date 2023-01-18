@@ -1,30 +1,45 @@
-"use strict";
-
-import { intersectionLesson } from "./lessons/intersection";
-import { interfaceLesson } from "./lessons/interface";
-import { typesLesson } from "./lessons/types";
-import { typeCheckingLesson } from "./lessons/typeChecking";
+import { intersectionLesson } from 'lessons/intersection';
+import { interfaceLesson } from 'lessons/interface';
+import { typesLesson } from 'lessons/types';
+import { typeCheckingLesson } from 'lessons/typeChecking';
+import {
+  simpleClosureLesson,
+  modulePatternLesson,
+  memoCalculationLesson,
+  singleRunFunctionLesson,
+} from 'lessons/closures';
+import { asyncPromiseLesson } from 'lessons/async';
 
 // define function signature for lessons array
-type Lesson = () => string;
+type Lesson = () => [string, string];
 
 /**
  * @name lessons
  * @description array of functions which represents lessons
  */
 const lessons: Lesson[] = [
-  interfaceLesson,
   intersectionLesson,
+  interfaceLesson,
   typesLesson,
   typeCheckingLesson,
+  simpleClosureLesson,
+  modulePatternLesson,
+  memoCalculationLesson,
+  singleRunFunctionLesson,
+  asyncPromiseLesson,
 ];
 
 /**
  * @description looping of lessons array and call each lesson
  */
-lessons.forEach((lesson: Lesson, i: number): void => {
-  console.log("=====================");
-  console.log(`Lesson: ${i}`);
-  console.log(lesson());
-  console.log("=====================");
+console.log(
+  '========================================================================',
+);
+lessons.forEach((lesson: Lesson): void => {
+  const [name, output] = lesson();
+  console.log(`Lesson: ${name}`);
+  console.log(output);
+  console.log(
+    '========================================================================',
+  );
 });
