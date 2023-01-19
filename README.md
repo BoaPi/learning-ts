@@ -91,8 +91,19 @@ It is possible to create a private and public API, module pattern implementation
 * returned **promise** of a `async` function is a different reference than passed in
 * a promise chain with `async...await` is constructed in stages, not in one go
 
-### Event Loop
+### Event Loop & Concurrency
 
+* is **non-blocking** and **asynchronous**
+* the **event loop** can only handle one thing at the time
+* **WebAPIs** behave like threads, which can do stuff concurrent
+* for **node** there are no WebAPIs but uses `libuv` under the hood
+* example WebAPIs are:
+  * setTimeout
+  * XHR
+* **render queue** of the browser has a higher priority
+* browser tries to re-render the screen in 60fps - `16.67ms`
+* **render queue** is blocked when the **stack** is **not** empty
+* when **render queue** is blocked user can not interact with the site
 * contains the **stack**, **heap** and **queue**
 * when a function is called, a **frame** is created on the **stack** with references to the functions arguments and local variables
 * when a second function inside the first function is called, a new **frame** is created on the **stack** in top of the first **frame**
@@ -113,9 +124,10 @@ It is possible to create a private and public API, module pattern implementation
 * if the **stack** is empty, the processing starts
 * if the **stack** is not empty, the processing will wait until the **stack** is empty
 * that means the time value of `setTimeout` is a minimum and not guaranteed
-* common case is a time value of `0`
-* `0` means not that the **message** will put immediately into the `stack`
-* instead is has to wait until all queued **messages** are processed
+* common case is a time value of `0` to push or defer the callback function into the **queue**:
+  * `setTimeout` will run and disapear from the **stack**
+  * `setTimeout` API than pushes a new **message** with the function after the provided time into the **queue**
+  * can be used to delay and unblock calls which get iterated over an array
 * `web workers` or cross-origin `iframe` have there own stack, heap and queue.
 * communication between those runtimes is possible through `postMessage`
 * `postMessage` adds a **message** to the other runtime, if the latter listens to `message` method
