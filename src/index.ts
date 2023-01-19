@@ -8,7 +8,11 @@ import {
   memoCalculationLesson,
   singleRunFunctionLesson,
 } from 'lessons/closures';
-import { asyncAwaitLesson, asyncPromiseLesson } from 'lessons/async';
+import {
+  asyncAwaitLesson,
+  asyncPromiseLesson,
+  delayedIterationCallsLesson,
+} from 'lessons/async';
 
 // define function signature for lessons array
 type Lesson = () => [string, string];
@@ -28,6 +32,7 @@ const lessons: Lesson[] = [
   singleRunFunctionLesson,
   asyncPromiseLesson,
   asyncAwaitLesson,
+  delayedIterationCallsLesson,
 ];
 
 /**
