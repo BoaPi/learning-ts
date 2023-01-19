@@ -247,4 +247,20 @@ const asyncAwaitLesson = (): [string, string] => {
   return ['Async Await', 'Results will be logged async'];
 };
 
-export { asyncPromiseLesson, asyncAwaitLesson };
+const delayedIterationCallsLesson = (): [string, string] => {
+  // synchronous iteration
+  [1, 2, 3, 4].forEach((i) => console.log(`Synchronous Iteration - ${i}`));
+  console.log('Synchronous after the iterations');
+
+  // asynchronous iteration
+  [1, 2, 3, 4].forEach((i) => {
+    setTimeout(() => {
+      console.log(`Synchronous Iteration - ${i}`);
+    }, 0);
+  });
+  console.log('Synchronous before the iterations');
+
+  return ['Delayed Iteration Calls', 'Results will be logged async'];
+};
+
+export { asyncPromiseLesson, asyncAwaitLesson, delayedIterationCallsLesson };
