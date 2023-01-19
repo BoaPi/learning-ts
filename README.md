@@ -85,6 +85,11 @@ It is possible to create a private and public API, module pattern implementation
   * `allSettled()`
   * `any()`
   * `race()`
+* to prevent **callback hell** new `async...await` syntax can be used
+* return value of an `async` function is always a **promise**
+* if not by itself already a **promise**, return value will be wrapped in a **promise**
+* returned **promise** of a `async` function is a different reference than passed in
+* a promise chain with `async...await` is constructed in stages, not in one go
 
 ### Event Loop
 
