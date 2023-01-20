@@ -13,6 +13,7 @@ import {
   asyncPromiseLesson,
   delayedIterationCallsLesson,
 } from 'lessons/async';
+import { simpleOverloadFunctionLesson } from 'lessons/overloadFunction';
 
 // define function signature for lessons array
 type Lesson = () => [string, string];
@@ -22,6 +23,7 @@ type Lesson = () => [string, string];
  * @description array of functions which represents lessons
  */
 const lessons: Lesson[] = [
+  simpleOverloadFunctionLesson,
   intersectionLesson,
   interfaceLesson,
   typesLesson,
