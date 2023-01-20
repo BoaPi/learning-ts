@@ -144,3 +144,10 @@ It is possible to create a private and public API, module pattern implementation
 * **JS** do not offer standard library modules
 * core functionalities are using **global** variables, e.g. `Math` and `Intl`
 * different runtimes may offer different module systems
+
+### TS - function overload
+
+* function declaration works as usual
+* parameter must be a **broad** as possible to accept all other function signatures
+* different function signatures are defined as `function fn(<some-parameter>: <parameter-type>): <return-type>;`
+* can be used to group different parameters / use-cases togehter
