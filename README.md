@@ -19,6 +19,10 @@ root
 ## TS/JS in depth
 
 TS & JS topics in depth, technical concepts, pattern etc.
+Javascript is a general purpose scripting language and focuses and pure computational logic. Therefore it does **not** deal with I/O.
+Without extra runtime APIs a JS program behaviour is **not** observable. The runtime or **host**, feeds data into the JavaScript engine. This can be:
+* global properties
+* hooks for the engine to interact with, e.g module resolution, reading data etc.
 
 ### General
 
@@ -132,3 +136,11 @@ It is possible to create a private and public API, module pattern implementation
 * communication between those runtimes is possible through `postMessage`
 * `postMessage` adds a **message** to the other runtime, if the latter listens to `message` method
 * the event loop never blocks
+
+### Modules
+
+* **modules** can use `import` and `export` statements
+* **URL** of **file patch** based
+* **JS** do not offer standard library modules
+* core functionalities are using **global** variables, e.g. `Math` and `Intl`
+* different runtimes may offer different module systems
