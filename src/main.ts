@@ -2,17 +2,8 @@ import { intersectionLesson } from './lessons/intersection.ts';
 import { interfaceLesson } from './lessons/interface.ts';
 import { typesLesson } from './lessons/types.ts';
 import { typeCheckingLesson } from './lessons/typeChecking.ts';
-import {
-  simpleClosureLesson,
-  modulePatternLesson,
-  memoCalculationLesson,
-  singleRunFunctionLesson,
-} from './lessons/closures.ts';
-import {
-  asyncAwaitLesson,
-  asyncPromiseLesson,
-  delayedIterationCallsLesson,
-} from './lessons/async.ts';
+import { memoCalculationLesson, modulePatternLesson, simpleClosureLesson, singleRunFunctionLesson } from './lessons/closures.ts';
+import { asyncAwaitLesson, asyncPromiseLesson, delayedIterationCallsLesson } from './lessons/async.ts';
 import { simpleOverloadFunctionLesson } from './lessons/overloadFunction.ts';
 
 // define function signature for lessons array

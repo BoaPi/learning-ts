@@ -18,4 +18,4 @@ type Burger = Food & {
   cheese: Cheese;
 };
 
-export { Food, Cheese, BlueCheese, Burger, Hotdog };
+export { BlueCheese, Burger, Cheese, Food, Hotdog };

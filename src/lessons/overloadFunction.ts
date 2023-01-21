@@ -14,7 +14,9 @@ const simpleOverloadFunctionLesson = (): [string, string] => {
   // complex function signatures to narrow down correct signature
   function maybe<T>(fnOrP: () => T): T | undefined;
   function maybe<T>(fnOrP: Promise<T>): Promise<T | undefined>;
-  function maybe<T>(fnOrP: (() => T) | Promise<T>): T | undefined | Promise<T | undefined> {
+  function maybe<T>(
+    fnOrP: (() => T) | Promise<T>,
+  ): T | undefined | Promise<T | undefined> {
     if (typeof fnOrP === 'function') {
       try {
         return fnOrP();
@@ -55,7 +57,11 @@ const simpleOverloadFunctionLesson = (): [string, string] => {
   // possible calls are:
   // 1) key + value + board to update
   // 2) partial board + board to update
-  function updateBoard<K extends keyof Board>(updateOrKey: K, boardOrValue: Board[K], board: Board): Board;
+  function updateBoard<K extends keyof Board>(
+    updateOrKey: K,
+    boardOrValue: Board[K],
+    board: Board,
+  ): Board;
   function updateBoard(updateOrKey: Partial<Board>, boardOrValue: Board): Board;
   function updateBoard<K extends keyof Board>(
     updateOrKey: Partial<Board> | K,
@@ -64,7 +70,9 @@ const simpleOverloadFunctionLesson = (): [string, string] => {
   ): Board {
     if (board) {
       if (typeof updateOrKey === 'string') {
-        if (typeof boardOrValue === 'string' || typeof boardOrValue === 'number') {
+        if (
+          typeof boardOrValue === 'string' || typeof boardOrValue === 'number'
+        ) {
           return {
             ...board,
             [updateOrKey]: boardOrValue,
@@ -73,7 +81,9 @@ const simpleOverloadFunctionLesson = (): [string, string] => {
       }
     } else {
       if (typeof updateOrKey !== 'string') {
-        if (typeof boardOrValue !== 'string' && typeof boardOrValue !== 'number') {
+        if (
+          typeof boardOrValue !== 'string' && typeof boardOrValue !== 'number'
+        ) {
           return {
             ...boardOrValue,
             ...updateOrKey,

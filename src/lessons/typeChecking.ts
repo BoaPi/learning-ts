@@ -1,4 +1,4 @@
-import { Dog, Cat } from '../interfaces/animals.ts';
+import { Cat, Dog } from '../interfaces/animals.ts';
 
 const typeCheckingLesson = (): [string, string] => {
   const dog: Dog = {

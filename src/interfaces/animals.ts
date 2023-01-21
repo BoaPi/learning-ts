@@ -39,4 +39,4 @@ interface Cat extends Animal {
   meow: () => string;
 }
 
-export type { Dog, Cat };
+export type { Cat, Dog };

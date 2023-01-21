@@ -123,9 +123,4 @@ const singleRunFunctionLesson = (): [string, string] => {
 
   return ['Single Run Function', output];
 };
-export {
-  simpleClosureLesson,
-  modulePatternLesson,
-  memoCalculationLesson,
-  singleRunFunctionLesson,
-};
+export { memoCalculationLesson, modulePatternLesson, simpleClosureLesson, singleRunFunctionLesson };

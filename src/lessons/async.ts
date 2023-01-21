@@ -78,9 +78,7 @@ const asyncPromiseLesson = (): [string, string] => {
     .finally(() => console.log('Any resolved - all done!'));
 
   // static methods
-  Promise.resolve('Promise resolved with static method').then((result) =>
-    console.log(result),
-  );
+  Promise.resolve('Promise resolved with static method').then((result) => console.log(result));
   Promise.reject(new Error('Promise rejected with static method')).catch(
     (result) => console.error(result),
   );
@@ -263,4 +261,4 @@ const delayedIterationCallsLesson = (): [string, string] => {
   return ['Delayed Iteration Calls', 'Results will be logged async'];
 };
 
-export { asyncPromiseLesson, asyncAwaitLesson, delayedIterationCallsLesson };
+export { asyncAwaitLesson, asyncPromiseLesson, delayedIterationCallsLesson };

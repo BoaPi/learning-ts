@@ -1,4 +1,4 @@
-import { Hotdog, Burger, BlueCheese } from '../types/food.ts';
+import { BlueCheese, Burger, Hotdog } from '../types/food.ts';
 
 interface Backpack {
   food: Hotdog | Burger | BlueCheese;
