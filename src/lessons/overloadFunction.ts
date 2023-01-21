@@ -18,7 +18,7 @@ const simpleOverloadFunctionLesson = (): [string, string] => {
     if (typeof fnOrP === 'function') {
       try {
         return fnOrP();
-      } catch (error) {
+      } catch (_) {
         return undefined;
       }
     }

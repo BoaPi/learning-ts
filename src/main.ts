@@ -1,19 +1,19 @@
-import { intersectionLesson } from 'lessons/intersection';
-import { interfaceLesson } from 'lessons/interface';
-import { typesLesson } from 'lessons/types';
-import { typeCheckingLesson } from 'lessons/typeChecking';
+import { intersectionLesson } from './lessons/intersection.ts';
+import { interfaceLesson } from './lessons/interface.ts';
+import { typesLesson } from './lessons/types.ts';
+import { typeCheckingLesson } from './lessons/typeChecking.ts';
 import {
   simpleClosureLesson,
   modulePatternLesson,
   memoCalculationLesson,
   singleRunFunctionLesson,
-} from 'lessons/closures';
+} from './lessons/closures.ts';
 import {
   asyncAwaitLesson,
   asyncPromiseLesson,
   delayedIterationCallsLesson,
-} from 'lessons/async';
-import { simpleOverloadFunctionLesson } from 'lessons/overloadFunction';
+} from './lessons/async.ts';
+import { simpleOverloadFunctionLesson } from './lessons/overloadFunction.ts';
 
 // define function signature for lessons array
 type Lesson = () => [string, string];

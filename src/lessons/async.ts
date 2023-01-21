@@ -32,14 +32,14 @@ const asyncPromiseLesson = (): [string, string] => {
     })
     .then((result) => console.table(['reject step 2: ', result]))
     .catch((err) => {
-      throw new Error(err);
+      return Error(err);
     });
 
   // simple reject promise
   promise2
     .then((result) => console.table([result]))
     .catch((err) => {
-      throw new Error(err);
+      return Error(err);
     });
 
   // all good
@@ -160,7 +160,7 @@ const asyncAwaitLesson = (): [string, string] => {
   asyncAwaitStepByStep();
 
   // async...await execution order
-  const asyncAwaitExecutionOrder = async () => {
+  const asyncAwaitExecutionOrder = () => {
     // slow example promise to see different construction orders
     const slowPromise = (add: string) => {
       return new Promise((resolve) => {

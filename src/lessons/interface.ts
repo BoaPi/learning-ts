@@ -1,4 +1,4 @@
-import { BlueCheese } from 'interfaces/food';
+import { BlueCheese } from '../interfaces/food.ts';
 
 const interfaceLesson = (): [string, string] => {
   const newCheese: BlueCheese = {

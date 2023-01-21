@@ -1,5 +1,5 @@
-import { Burger, Hotdog } from 'types/food';
-import { Backpack } from 'interfaces/stuff';
+import { Burger, Hotdog } from '../types/food.ts';
+import { Backpack } from '../interfaces/stuff.ts';
 
 const MyHotdog: Hotdog = {
   needsFridge: false,
