@@ -1,12 +1,13 @@
+import { Lesson } from '../main.ts';
 import { BlueCheese } from '../types/food.ts';
 
-const intersectionLesson = (): [string, string] => {
+const intersectionLesson = (): [string, Lesson] => {
   const newCheese: BlueCheese = {
     needsFridge: true,
     flavor: 'strong',
   };
 
-  return ['intersection', newCheese.flavor];
+  return ['intersection', Promise.resolve(newCheese.flavor)];
 };
 
 export { intersectionLesson };
