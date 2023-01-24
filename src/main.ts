@@ -11,26 +11,29 @@ import {
 import { asyncAwaitLesson, asyncPromiseLesson, delayedIterationCallsLesson } from './lessons/async.ts';
 import { simpleOverloadFunctionLesson } from './lessons/overloadFunction.ts';
 
+// function signature
+export type Lesson = Promise<string>;
+
 // define function signature for lessons array
-type Lesson = () => [string, string];
+type LessonSummary = () => [string, Lesson];
 
 /**
  * @name lessons
  * @description array of functions which represents lessons
  */
-const lessons: Lesson[] = [
-  simpleOverloadFunctionLesson,
+const lessons: LessonSummary[] = [
   intersectionLesson,
-  interfaceLesson,
-  typesLesson,
-  typeCheckingLesson,
-  simpleClosureLesson,
-  modulePatternLesson,
-  memoCalculationLesson,
-  singleRunFunctionLesson,
-  asyncPromiseLesson,
-  asyncAwaitLesson,
-  delayedIterationCallsLesson,
+  // interfaceLesson,
+  // typesLesson,
+  // typeCheckingLesson,
+  // simpleClosureLesson,
+  // modulePatternLesson,
+  // memoCalculationLesson,
+  // singleRunFunctionLesson,
+  // asyncPromiseLesson,
+  // asyncAwaitLesson,
+  // delayedIterationCallsLesson,
+  // simpleOverloadFunctionLesson,
 ];
 
 /**
@@ -39,10 +42,10 @@ const lessons: Lesson[] = [
 console.log(
   '========================================================================',
 );
-lessons.forEach((lesson: Lesson): void => {
+lessons.forEach(async (lesson: LessonSummary): Promise<void> => {
   const [name, output] = lesson();
   console.log(`Lesson: ${name}`);
-  console.log(output);
+  console.log(await output);
   console.log(
     '========================================================================',
   );
