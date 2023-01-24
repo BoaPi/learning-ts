@@ -2,7 +2,12 @@ import { intersectionLesson } from './lessons/intersection.ts';
 import { interfaceLesson } from './lessons/interface.ts';
 import { typesLesson } from './lessons/types.ts';
 import { typeCheckingLesson } from './lessons/typeChecking.ts';
-import { memoCalculationLesson, modulePatternLesson, simpleClosureLesson, singleRunFunctionLesson } from './lessons/closures.ts';
+import {
+  memoCalculationLesson,
+  modulePatternLesson,
+  simpleClosureLesson,
+  singleRunFunctionLesson,
+} from './lessons/closures.ts';
 import { asyncAwaitLesson, asyncPromiseLesson, delayedIterationCallsLesson } from './lessons/async.ts';
 import { simpleOverloadFunctionLesson } from './lessons/overloadFunction.ts';
 
