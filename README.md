@@ -7,10 +7,11 @@ e.g. closures, hoisting, memorization and event-loop.
 ## structure
 
 root
-+-- src
-+-- interfaces
-+-- types
-+-- lessons
+
+- src
+  - interfaces
+  - types
+  - lessons
 
 - interfaces - includes all interfaces used through the repo
 - types - includes all types used through the repo
@@ -20,7 +21,7 @@ root
 
 TS & JS topics in depth, technical concepts, pattern etc.
 Javascript is a general purpose scripting language and focuses and pure computational logic. Therefore it does **not** deal with I/O.
-Without extra runtime APIs a JS program behaviour is **not** observable. The runtime or **host**, feeds data into the JavaScript engine. This can be:
+Without extra runtime APIs a JS program behavior is **not** observable. The runtime or **host**, feeds data into the JavaScript engine. This can be:
 
 - global properties
 - hooks for the engine to interact with, e.g module resolution, reading data etc.
@@ -37,7 +38,7 @@ Without extra runtime APIs a JS program behaviour is **not** observable. The run
 - all other values are `true`
 - `let` => block-level variables
 - `const` => never intended to change, also block level
-- `var` => non-block scoping, surprising behavior and therfore discourage in modern JS/TS
+- `var` => non-block scoping, surprising behavior and therefor discourage in modern JS/TS
 
 ### Objects
 
@@ -72,7 +73,7 @@ It is possible to create a private and public API, module pattern implementation
 
 ### Async Code & Promises
 
-- **promises** => eventual completion or failure of an asynchonous operation and the resulting value
+- **promises** => eventual completion or failure of an asynchronous operation and the resulting value
 - **promises** can be:
   - **pending** => initial state
   - **fulfilled** => successful completion
@@ -82,10 +83,10 @@ It is possible to create a private and public API, module pattern implementation
 - `.then()` takes two parameters:
   - callback for as resolve and successful handler
   - callback for as reject and failure handler
-- therefore **promises** can be chanined in success cases
+- therefore **promises** can be chained in success cases
 - return value of a `resolve` promise is passed along to the next `.then()`
 - reject reason of a `reject` promise is passed along to the next **rejection handler**
-- there are four ways for concurrenc handling of **promises**, see lessons for examples
+- there are four ways for concurrent handling of **promises**, see lessons for examples
   - `all()
   - `allSettled()`
   - `any()`
@@ -130,7 +131,7 @@ It is possible to create a private and public API, module pattern implementation
 - if the **stack** is not empty, the processing will wait until the **stack** is empty
 - that means the time value of `setTimeout` is a minimum and not guaranteed
 - common case is a time value of `0` to push or defer the callback function into the **queue**:
-  - `setTimeout` will run and disapear from the **stack**
+  - `setTimeout` will run and disappear from the **stack**
   - `setTimeout` API than pushes a new **message** with the function after the provided time into the **queue**
   - can be used to delay and unblock calls which get iterated over an array
 - `web workers` or cross-origin `iframe` have there own stack, heap and queue.
@@ -151,4 +152,4 @@ It is possible to create a private and public API, module pattern implementation
 - function declaration works as usual
 - parameter must be a **broad** as possible to accept all other function signatures
 - different function signatures are defined as `function fn(<some-parameter>: <parameter-type>): <return-type>;`
-- can be used to group different parameters / use-cases togehter
+- can be used to group different parameters / use-cases together
