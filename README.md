@@ -10,9 +10,9 @@ Everythings is running on `deno` and `pnpm`.
 
 List of sources I will work through:
 - [TS algorithms & Data structures](https://frontendmasters.com/courses/algorithms/)
-- [The Set](https://flaviocopes.com/javascript-data-structures-set/)
-- [The Map](https://flaviocopes.com/javascript-data-structures-map/#what-is-a-map)
-- [OOP](https://www.youtube.com/watch?v=aAAS9cEuFYI)
+- [JS - The Set](https://flaviocopes.com/javascript-data-structures-set/)
+- [JS - The Map](https://flaviocopes.com/javascript-data-structures-map/#what-is-a-map)
+- [OOP in JS/TS](https://www.youtube.com/watch?v=aAAS9cEuFYI)
 
 ## structure
 
