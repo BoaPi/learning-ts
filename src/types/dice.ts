@@ -12,11 +12,13 @@ type SingleDice = {
   type: DiceTypes;
   value: number;
   throwDice: () => number;
+  getValue: () => number;
 };
 
 type MultipleDice = {
   dice: SingleDice[];
   throwDice: () => SingleDice[];
+  getValues: () => SingleDice[];
 };
 
 class Dice implements SingleDice {
@@ -32,6 +34,8 @@ class Dice implements SingleDice {
     this.value = Math.floor(Math.random() * ((this.type + 1) - 1) + 1);
     return this.value;
   }
+
+  public getValue = () => this.value;
 }
 
 class DiceGroup implements MultipleDice {
@@ -50,6 +54,8 @@ class DiceGroup implements MultipleDice {
 
     return this.dice;
   }
+
+  public getValues = () => this.dice;
 }
 
 export { Dice, DiceGroup };

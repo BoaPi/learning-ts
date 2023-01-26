@@ -29,7 +29,10 @@ console.log(d20.throwDice());
 const d12Group = new DiceGroup(DiceTypes.D12, 3);
 d12Group.throwDice();
 
-console.log(d12Group);
+console.log(d12Group.getValues());
+console.log(d12Group.getValues());
+d12Group.throwDice();
+console.log(d12Group.getValues());
 
 /**
  * @name lessons
