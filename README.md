@@ -153,3 +153,4 @@ It is possible to create a private and public API, module pattern implementation
 - parameter must be a **broad** as possible to accept all other function signatures
 - different function signatures are defined as `function fn(<some-parameter>: <parameter-type>): <return-type>;`
 - can be used to group different parameters / use-cases together
+
