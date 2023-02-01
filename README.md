@@ -162,3 +162,10 @@ It is possible to create a private and public API, module pattern implementation
 - different function signatures are defined as `function fn(<some-parameter>: <parameter-type>): <return-type>;`
 - can be used to group different parameters / use-cases together
 
+### Array methods
+
+- `.filter()` => shallow copy
+- `.forEach()` => mutates the array, not chainable
+- `.map()` => creates a new array
+- `.reduce()` => mutates the array
+- `.reverse()` => mutates the array
