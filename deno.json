@@ -3,6 +3,9 @@
     "allowJs": false,
     "strict": true
   },
+  "tasks": {
+    "dev": "deno run --watch src/main.ts"
+  },
   "lint": {
     "files": {
       "include": ["src/"]
