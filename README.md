@@ -4,7 +4,7 @@ repo includes different approaches for typing things. Also useful as a quick loo
 for certain use cases. Also it will include basic JS knowledge,
 e.g. closures, hoisting, memorization and event-loop.
 
-Everythings is running on `deno` and `pnpm`.
+Everythings is running on `deno`.
 
 ## Sources
 
